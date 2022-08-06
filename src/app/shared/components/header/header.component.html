@@ -2,15 +2,15 @@
     <div class="content-header flex justify-content-center align-items-center flex-direction-column">
         <img src="../../../../assets/logo_pets.png" alt="NOGHERIC PETS">
         <div class=" content-filter flex gap-10 flex-direction-row">
-            <button class="btn a flex justify-content-center align-items-center gap-10" (click)="selectOptionDog($event)" #AllquRef>
+            <button class="btn a flex justify-content-center align-items-center gap-10" (click)="selectOptionDog()" #AllquRef>
                 <span class="icon-allqu"></span>
                 <span class="label">Allqu</span>
             </button>
-            <button class="btn b flex justify-content-center align-items-center gap-10" (click)="selectOptionCat($event)" #MichiRef>
+            <button class="btn b flex justify-content-center align-items-center gap-10" (click)="selectOptionCat()" #MichiRef>
                 <span class="icon-michi "></span>
                 <span class="label">Michi</span>
             </button>
-            <button class="btn c flex justify-content-center align-items-center gap-10" (click)="selectOptionAll($event)" #AllquMichiRef>
+            <button class="btn c flex justify-content-center align-items-center gap-10 select" (click)="selectOptionAll()" #AllquMichiRef>
                 <span class="icon-michi"></span>
                 <span class="label">&</span>
                 <span class="icon-allqu"></span>
