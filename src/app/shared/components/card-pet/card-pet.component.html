@@ -1,0 +1,28 @@
+
+<div class="content-card align-items-center" [ngClass]="{'dog': pet.type == 'DOG', 'cat': pet.type == 'CAT'}" *ngFor="let pet of pets">
+    <div class="image-pet flex gap-10 align-items-center">
+        <img src="../../../../assets/pet_dog.png" alt="NOGHERIC PET" *ngIf="pet.type == 'DOG'">
+        <img src="../../../../assets/pet_cat.png" alt="NOGHERIC PET" *ngIf="pet.type == 'CAT'">
+    </div>
+    <div class="flex flex-direction-column card-information">
+        <div class="name-pet">
+            {{pet.name}}
+        </div>
+        <div class="description-pet">
+            {{pet.description}}
+        </div>
+        <div class="info-contact flex flex-direction-column">
+            <div>
+                <i class="bi bi-phone"></i> {{pet.cellphone}}
+            </div>
+            <div>
+                <i class="bi bi-envelope"></i> {{pet.email}}
+            </div>
+            <div>
+                <i class="bi bi-pin-map"></i> {{pet.district}}, {{pet.department}}
+            </div>
+        </div>
+    </div>
+</div>
+
+

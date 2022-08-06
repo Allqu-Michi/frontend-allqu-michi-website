@@ -1,0 +1,118 @@
+.content-header {
+    margin-bottom: 30px;
+    & img {
+        width: 150px;
+        margin: 15px;
+    }
+    & .content-filter {
+        width: 100%;
+        & .btn{
+            width: 100%;
+            cursor: pointer;
+            padding: 6px 5px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid var(--color-grey1);
+            &:nth-child(1).select {
+                background-color: var(--color-blue1);
+                border: 1px solid var(--color-blue1);
+                 & svg , .label {
+                    color: #FFF;
+                 }
+                 & .icon-allqu{ 
+                    width: 20px;
+                    height: 25px;
+                    color: #fff;
+                    background-size: cover;
+                    background-image: url('../../../../assets/icons/Allqu-White.svg'); 
+                }
+            }
+            &:nth-child(2).select {
+                background-color: var(--color-orange1);
+                border: 1px solid var(--color-orange1);
+                 & svg , .label {
+                    color: #FFF;
+                 }
+                 & .icon-michi{ 
+                    width: 20px;
+                    height: 25px;
+                    color: #fff;
+                    background-size: cover;
+                    background-image: url('../../../../assets/icons/Michi-White.svg'); 
+                }
+            }
+            &:nth-child(3).select {
+                background-color: var(--color-blue1);
+                border: 1px solid var(--color-blue1);
+                 & svg , .label {
+                    color: #FFF;
+                 }
+                 & .icon-allqu{ 
+                    width: 20px;
+                    height: 25px;
+                    color: #fff;
+                    background-size: cover;
+                    background-image: url('../../../../assets/icons/Allqu-White.svg'); 
+                }
+                & .icon-michi{ 
+                    width: 20px;
+                    height: 25px;
+                    color: #fff;
+                    background-size: cover;
+                    background-image: url('../../../../assets/icons/Michi-White.svg'); 
+                }
+            }
+            & .label {
+                color: var(--color-grey1);
+            }
+        }
+    }
+}
+
+.icon-allqu{ 
+    width: 20px;
+    height: 25px;
+    color: #fff;
+    background-size: cover;
+    background-image: url('../../../../assets/icons/Allqu.svg');
+    // &.select {
+    //     background-image: url('../../../../assets/icons/Allqu-White.svg'); 
+    // }
+}
+
+.icon-michi{ 
+    width: 20px;
+    height: 25px;
+    color: #fff;
+    background-size: cover;
+    background-image: url('../../../../assets/icons/Michi.svg');
+    // &.select {
+    //     background-image: url('../../../../assets/icons/Michi-White.svg'); 
+    // }
+}
+
+
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) {
+
+}
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) { 
+    .content-header {
+        & img {
+            width: 200px;
+        }
+    }
+}
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) {
+
+}
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.light-mode {
+    
+    --color-grey1: #626262;
+    --color-grey2: #D3D2D7;
+    --color-grey3: #EEEEEE;
+    --color-grey4: #DDDDDD;
+
+    --color-purple1: #1F1D31;
+    --color-purple2: #4D2AFF;
+    --color-purple3: #B394F6;
+
+    --color-blue1: #06113C;
+
+    --color-pink1:  #FC2580;
+
+    --color-orange1: #FF8C32;
+
+    --color-background-card: #FFFFFF;
+
+    background-color: var(--color-grey3);
+}
+
+
+.flex {
+    display: flex;
+}
+
+.justify-content {
+    &-start {
+        justify-content: start;
+    }
+    &-center {
+        justify-content: center;
+    }
+    &-end {
+        justify-content: end;
+    }
+    &-between {
+        justify-content: space-between;
+    }
+}
+
+.align-items {
+    &-center {
+        align-items: center;
+    }
+}
+
+.flex-direction {
+    &-row {
+        flex-direction: row;
+    }
+    &-column {
+        flex-direction: column;
+    }
+}
+
+.gap {
+    &-10 {
+        gap: 10px;
+    }
+    &-20 {
+        gap: 20px;
+    }
+}
+
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) {
+
+}
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) { 
+    
+}
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) {
+
+}
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) {
+
+}

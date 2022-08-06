@@ -1,0 +1,39 @@
+.content-footer {
+    margin-top: 25px;
+    background-color: var(--color-blue1);
+    height: 180px;
+    & .logo {
+        & span {
+            color: var(--color-orange1);
+            font-weight: bold;
+        }
+        & img {
+            width: 150px;
+        }
+    }
+    & .terms-and-conditions {
+        & a {
+            color: var(--color-grey4);
+        }
+    }
+}
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) {
+
+}
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) { 
+
+}
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) {
+
+}
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) {
+
+}

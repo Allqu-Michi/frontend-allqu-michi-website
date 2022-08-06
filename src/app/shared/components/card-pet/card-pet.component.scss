@@ -1,0 +1,193 @@
+
+
+.content-card {
+    display: grid;
+    grid-template-columns: 0 auto;
+    & .image-pet {
+        border-radius: 20px;
+        position: relative;
+        z-index: 10;
+        width: 155px;
+        height: 150px;
+        & img {
+            position: absolute;
+            bottom: 0;
+            width:138px;
+            height: 169px;
+        }
+    }
+    & .card-information {
+        width: 100%;
+        left: -150px;
+        height: 137px;
+        margin: 10px 0;
+        padding: 10px;
+        padding-left: 164px;
+        border-radius: 20px;
+        background-color: var(--color-background-card);
+        & .name-pet {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        & .info-contact {
+            font-size: 11px;
+        }
+        & .description-pet {
+            height: 48px;
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 400;
+            color: var(--color-grey1);
+        }
+        & .info-site {
+            font-size: 11px;
+            font-weight: bold;
+        }
+    }
+    &.dog{
+        & .image-pet {
+            background-color: var(--color-blue1);
+        }
+        & .card-information{
+            & .name-pet {
+                color: var(--color-orange1);
+            }
+            & .info-contact {
+                color: var(--color-orange1);
+            }
+        }
+    }
+    &.cat{
+        & .image-pet {
+            background-color: var(--color-orange1);
+        }
+        & .card-information{
+            & .name-pet {
+                color: var(--color-blue1);
+            }
+            & .info-contact {
+                color: var(--color-blue1);
+            }
+        }
+    }
+}
+
+// .content-card:nth-child(odd) {
+//     display: grid;
+//     grid-template-columns: 0 auto;
+//     & .image-pet {
+//         border-radius: 20px;
+//         position: relative;
+//         z-index: 10;
+//         width: 155px;
+//         height: 150px;
+//         background-color: var(--color-blue1);
+//         & img {
+//             position: absolute;
+//             bottom: 0;
+//             width:138px;
+//             height: 169px;
+//         }
+//     }
+//     & .card-information {
+//         width: 100%;
+//         left: -150px;
+//         height: 137px;
+//         margin: 10px 0;
+//         padding: 10px;
+//         padding-left: 164px;
+//         border-radius: 20px;
+//         background-color: var(--color-background-card);
+//         & .name-pet {
+//             font-weight: 800;
+//             font-size: 16px;
+//             line-height: 22px;
+//             color: var(--color-orange1);
+//         }
+//         & .info-contact {
+//             font-size: 11px;
+//             color: var(--color-orange1);
+//         }
+//         & .description-pet {
+//             height: 48px;
+//             font-size: 12px;
+//             line-height: 12px;
+//             color: var(--color-grey1);
+//             font-weight: 400;
+//         }
+//         & .info-site {
+//             font-size: 11px;
+//             font-weight: bold;
+//         }
+//     }
+// }
+
+// .content-card:nth-child(even) {
+//     display: grid;
+//     grid-template-columns: 0 auto;
+//     & .image-pet {
+//         border-radius: 20px;
+//         position: relative;
+//         width: 155px;
+//         height: 150px;
+//         background-color: var(--color-orange1);
+//         & img {
+//             position: absolute;
+//             bottom: 0;
+//             width:138px;
+//             height: 169px;
+//         }
+//     }
+//     & .card-information {
+//         width: 100%;
+//         left: -150px;
+//         height: 137px;
+//         margin: 10px 0;
+//         padding: 10px;
+//         padding-left: 164px;
+//         border-radius: 20px;
+//         background-color: var(--color-background-card);
+//         & .name-pet {
+//             font-weight: 800;
+//             font-size: 16px;
+//             line-height: 22px;
+//             color: var(--color-blue1);
+//         }
+//         & .info-contact {
+//             font-size: 11px;
+//             color: var(--color-blue1);
+//         }
+//         & .description-pet {
+//             height: 48px;
+//             font-size: 12px;
+//             line-height: 12px;
+//             color: var(--color-grey1);
+//             font-weight: 400;
+//         }
+//         & .info-site {
+//             font-size: 11px;
+//             font-weight: bold;
+//         }
+//     }
+// }
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) {
+
+}
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) { 
+    
+}
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) {
+
+}
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) {
+
+}
