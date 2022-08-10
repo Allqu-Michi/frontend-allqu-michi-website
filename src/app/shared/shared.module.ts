@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardPetComponent } from './components/card-pet/card-pet.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HeaderComponent,
     CardPetComponent,
-    FooterComponent
+    FooterComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     HeaderComponent,
     CardPetComponent,
-    FooterComponent
+    FooterComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }

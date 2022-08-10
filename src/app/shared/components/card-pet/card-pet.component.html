@@ -1,8 +1,8 @@
 
-<div class="content-card align-items-center" [ngClass]="{'dog': pet.type == 'DOG', 'cat': pet.type == 'CAT'}" *ngFor="let pet of pets">
+<div class="content-card align-items-center" [ngClass]="{'dog': pet.petTypeId == 1, 'cat': pet.petTypeId == 2}" *ngFor="let pet of pets">
     <div class="image-pet flex gap-10 align-items-center">
-        <img src="../../../../assets/pet_dog.png" alt="NOGHERIC PET" *ngIf="pet.type == 'DOG'">
-        <img src="../../../../assets/pet_cat.png" alt="NOGHERIC PET" *ngIf="pet.type == 'CAT'">
+        <img src="{{pet.imageUrl}}" alt="NOGHERIC PET" *ngIf="pet.petTypeId == 1">
+        <img src="{{pet.imageUrl}}" alt="NOGHERIC PET" *ngIf="pet.petTypeId == 2">
     </div>
     <div class="flex flex-direction-column card-information">
         <div class="name-pet">
@@ -19,7 +19,7 @@
                 <i class="bi bi-envelope"></i> {{pet.email}}
             </div>
             <div>
-                <i class="bi bi-pin-map"></i> {{pet.district}}, {{pet.department}}
+                <i class="bi bi-pin-map"></i> {{pet.address}}, {{pet.department}}
             </div>
         </div>
     </div>
