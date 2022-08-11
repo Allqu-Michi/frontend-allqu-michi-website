@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, EventEmitter, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 import { ServicePetsService } from 'src/app/modules/home/pages/pets/services/service-pets.service';
 
 @Component({
@@ -12,16 +12,24 @@ export class HeaderComponent implements OnInit {
   @ViewChild('MichiRef') MichiRef: ElementRef = {} as ElementRef;
   @ViewChild('AllquMichiRef') AllquMichiRef: ElementRef = {} as ElementRef;
 
-  @Output() petsO = new EventEmitter<any>();
-  @Output() spinnerO = new EventEmitter<any>();
+  @Output() petsO: EventEmitter<any> = new EventEmitter();
+  @Output() spinnerO: EventEmitter<any> = new EventEmitter();
 
   constructor(
     private _renderer:Renderer2,
-    private _PetsS:ServicePetsService
+    private _PetsS:ServicePetsService,
+    private _cd: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
-   this.selectOptionAll();
+   
+  }
+
+  ngAfterViewInit(){
+    this.selectOptionAll();
+    this._cd.detectChanges();
+    
+   
   }
 
   selectOptionDog(){

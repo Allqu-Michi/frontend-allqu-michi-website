@@ -25,7 +25,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     HeaderComponent,
     CardPetComponent,
     FooterComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    PaginationComponent
   ]
 })
 export class SharedModule { }
