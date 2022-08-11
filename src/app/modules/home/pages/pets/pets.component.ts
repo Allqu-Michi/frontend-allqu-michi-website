@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, SimpleChanges } from '@angular/core';
 import data from '../../../../data/pets.json';
 import { ServicePetsService } from './services/service-pets.service';
 
@@ -11,12 +11,20 @@ export class PetsComponent implements OnInit {
 
   pets: any = [];
   spinner: boolean = false;
+  petsFinal: any = [];
 
   constructor(
-   
+   private _cd:ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
   }
 
+  ngAfterViewInit(){
+
+  }
+
+  ngAfterViewChecked(){
+    this._cd.detectChanges();
+  }
 }
