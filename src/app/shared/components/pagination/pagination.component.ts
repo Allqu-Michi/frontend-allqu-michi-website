@@ -5,6 +5,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss']
 })
+
 export class PaginationComponent implements OnChanges {
 
   @Input() dataI:any = [];
