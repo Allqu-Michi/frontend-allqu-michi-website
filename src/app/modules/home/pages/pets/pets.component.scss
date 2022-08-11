@@ -11,12 +11,6 @@
     grid-template-columns: repeat(1,1fr);
 }
 
-.content-pagination {
-    width: 100%;
-    margin: 15px 0;
-}
-
-
 /* Pantallas pequeñas (móviles en landscape de más de 576px) */
 @media (min-width: 576px) {
     .content-pets {
