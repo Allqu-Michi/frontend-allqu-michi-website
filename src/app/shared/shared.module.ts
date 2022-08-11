@@ -5,6 +5,7 @@ import { CardPetComponent } from './components/card-pet/card-pet.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 
@@ -13,7 +14,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     HeaderComponent,
     CardPetComponent,
     FooterComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    PaginationComponent
   ],
   imports: [
     CommonModule,
