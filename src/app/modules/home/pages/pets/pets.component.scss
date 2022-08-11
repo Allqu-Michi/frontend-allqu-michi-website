@@ -1,30 +1,60 @@
 
 .content-pets {
     margin: auto;
-    width: 350px;
+    width: 70%;
     min-height: 100%;
 }
 
-
+.app-card-pet {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
 
 /* Pantallas pequeñas (móviles en landscape de más de 576px) */
 @media (min-width: 576px) {
     .content-pets {
-        width: 550px;
+        // width: 550px;
+        width: 70%;
+    }
+    .app-card-pet {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
 /* Pantallas medianas (tablets de más de 768px) */
 @media (min-width: 768px) { 
-
+    
+    .content-pets {
+        // width: 550px;
+        width: 50%;
+    }
+    .app-card-pet {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
 /* Pantallas grandes (desktops de más de 992px) */
 @media (min-width: 992px) {
-
+    .content-pets {
+        // width: 550px;
+        width: 70%;
+    }
+    .app-card-pet {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 /* Pantallas muy grandes (desktops de más de 1200px) */
 @media (min-width: 1200px) {
-
+    .content-pets {
+        // width: 550px;
+        width: 70%;
+    }
+    .app-card-pet {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
 }

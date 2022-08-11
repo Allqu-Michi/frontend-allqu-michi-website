@@ -2,7 +2,7 @@
 <div class="content-pets gap-10 flex-direction-column align-items-center">
     <app-header (petsO)="pets=$event" (spinnerO)="spinner=$event"></app-header>
     <div>
-        <app-card-pet [pets]="pets" class="app-card-content flex flex-direction-column gap-20"></app-card-pet>
+        <app-card-pet [pets]="pets" class="app-card-content flex-direction-column gap-20 app-card-pet"></app-card-pet>
     </div>
     <app-spinner class="flex flex-direction-column align-items-center" *ngIf="spinner"></app-spinner>
   
