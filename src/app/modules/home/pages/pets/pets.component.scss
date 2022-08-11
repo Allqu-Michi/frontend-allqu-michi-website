@@ -1,8 +1,14 @@
 
 .content-pets {
     margin: auto;
-    width: 70%;
+    width: 100%;
     min-height: 100%;
+    padding: 0 8px;
+}
+
+.app-card-pet {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
 }
 
 .app-card-pet {
@@ -15,7 +21,6 @@
 /* Pantallas pequeñas (móviles en landscape de más de 576px) */
 @media (min-width: 576px) {
     .content-pets {
-        // width: 550px;
         width: 70%;
     }
     .app-card-pet {
@@ -28,7 +33,6 @@
 @media (min-width: 768px) { 
     
     .content-pets {
-        // width: 550px;
         width: 50%;
     }
     .app-card-pet {
@@ -40,7 +44,6 @@
 /* Pantallas grandes (desktops de más de 992px) */
 @media (min-width: 992px) {
     .content-pets {
-        // width: 550px;
         width: 70%;
     }
     .app-card-pet {
@@ -52,7 +55,6 @@
 /* Pantallas muy grandes (desktops de más de 1200px) */
 @media (min-width: 1200px) {
     .content-pets {
-        // width: 550px;
         width: 70%;
     }
     .app-card-pet {
