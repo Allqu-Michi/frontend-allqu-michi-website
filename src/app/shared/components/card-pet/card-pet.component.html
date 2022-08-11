@@ -1,4 +1,3 @@
-
 <div class="content-card align-items-center" [ngClass]="{'dog': pet.petTypeId == 1, 'cat': pet.petTypeId == 2}" *ngFor="let pet of pets">
     <div class="image-pet flex gap-10 align-items-center">
         <img src="{{pet.imageUrl}}" alt="NOGHERIC PET" *ngIf="pet.petTypeId == 1">
@@ -24,5 +23,6 @@
         </div>
     </div>
 </div>
+
 
 
