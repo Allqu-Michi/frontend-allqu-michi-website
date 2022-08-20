@@ -7,7 +7,7 @@ const routes:Routes = [
  {path:'', component: HomeComponent, children:[
   {path:'', component: PetsComponent}
  ]},
- { path: '**', redirectTo: ''}
+ { path: '**', redirectTo: '', pathMatch:'prefix'}
 ];
 
 @NgModule({

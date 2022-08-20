@@ -1,0 +1,27 @@
+<div class="content-auth">
+  <div class="content-logo flex align-items-center flex-direction-column">
+    <img class="img-logo" src="../../../../assets/logo_pets.png" alt="NOGHERIC PETS">
+  </div>
+  <form [formGroup]="authForm" (ngSubmit)="handleLogin()" class="flex flex-direction-column align-items-center gap-10">
+    <app-input [textLabel]="'Correo'" [typeInput]="'text'" [placeholderInput]="'nogheric@example.com'" [alterInput]="alertEmail" formControlName="email"></app-input>
+    <app-input [textLabel]="'Contraseña'" [typeInput]="'password'" [placeholderInput]="'********'" [alterInput]="alertPassword" formControlName='password'></app-input>
+    <app-button [textButton]="'Ingresar'" *ngIf="!loading"></app-button>
+      <!-- <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert-input">
+        <div *ngIf="email?.errors?.['required']">
+          Ingrese un correo.
+        </div>
+        <div *ngIf="email?.errors?.['email']">
+          Ingrese un correo válido.
+        </div>
+      </div>
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="alert-input">
+        <div *ngIf="password?.errors?.['required']">
+          Ingrese una contraseña.
+        </div>
+        <div *ngIf="password?.errors?.['minlength']">
+          La contraseña debe contener 8 caracteres como mínimo.
+        </div>
+      </div> -->
+  </form>
+  <app-spinner class="flex flex-direction-column align-items-center" *ngIf="loading"></app-spinner>
+</div>
