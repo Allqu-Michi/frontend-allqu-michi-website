@@ -1,12 +1,12 @@
-
-.content-input {
+.content-textarea {
     & .label {
         color: var(--color-grey1);
         font-size: 14px;
         font-weight: bold;
     }
     
-    & .input {
+    & .textarea {
+        resize: none;
         width: 100%;
         border: 1px solid var(--color-grey2);
         outline: none;

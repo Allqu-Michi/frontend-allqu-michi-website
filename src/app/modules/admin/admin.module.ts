@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponent } from './admin.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FormPetsComponent } from './pages/form-pets/form-pets.component';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     declarations: [
         AdminComponent, 
         AuthComponent, 
-        DashboardComponent
+        DashboardComponent, 
+        FormPetsComponent
     ],
     providers: [],
 })

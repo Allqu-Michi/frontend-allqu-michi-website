@@ -50,7 +50,7 @@ export class AuthComponent implements OnInit{
   }
   get password() {
     if(this.authForm.get('password')?.value==""){
-      return "Ingrese una contraseña";
+      return "Ingrese una contraseña.";
     }
     else if(this.authForm.get('password')?.errors?.['minlength']) {
       return "La contraseña debe tener 8 caracteres como mínimo."

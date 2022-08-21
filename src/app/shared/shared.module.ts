@@ -10,6 +10,8 @@ import { InputComponent } from './components/input/input.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastComponent } from './components/toast/toast.component';
+import { TextareaComponent } from './components/textarea/textarea.component';
+import { SelectoptionComponent } from './components/selectoption/selectoption.component';
 
 
 
@@ -22,7 +24,9 @@ import { ToastComponent } from './components/toast/toast.component';
     PaginationComponent,
     InputComponent,
     ButtonComponent,
-    ToastComponent
+    ToastComponent,
+    TextareaComponent,
+    SelectoptionComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +42,9 @@ import { ToastComponent } from './components/toast/toast.component';
     PaginationComponent,
     InputComponent,
     ButtonComponent,
-    ToastComponent
+    ToastComponent,
+    TextareaComponent,
+    SelectoptionComponent
   ]
 })
 export class SharedModule { }

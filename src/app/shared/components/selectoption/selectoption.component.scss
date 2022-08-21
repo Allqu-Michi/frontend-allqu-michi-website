@@ -1,12 +1,12 @@
 
-.content-input {
+.content-select {
     & .label {
         color: var(--color-grey1);
         font-size: 14px;
         font-weight: bold;
     }
     
-    & .input {
+    & .select {
         width: 100%;
         border: 1px solid var(--color-grey2);
         outline: none;

@@ -21,6 +21,7 @@ export class InterceptorsInterceptor implements HttpInterceptor {
     if(!apiKey && !Authorization){
       return next.handle(request);
     }
+    
     const headers = request.clone({
       headers: request.headers
       .set('apiKey', apiKey)
