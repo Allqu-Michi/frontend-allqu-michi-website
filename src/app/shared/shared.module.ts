@@ -6,6 +6,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { InputComponent } from './components/input/input.component';
+import { ButtonComponent } from './components/button/button.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastComponent } from './components/toast/toast.component';
+import { TextareaComponent } from './components/textarea/textarea.component';
+import { SelectoptionComponent } from './components/selectoption/selectoption.component';
 
 
 
@@ -15,18 +21,30 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     CardPetComponent,
     FooterComponent,
     SpinnerComponent,
-    PaginationComponent
+    PaginationComponent,
+    InputComponent,
+    ButtonComponent,
+    ToastComponent,
+    TextareaComponent,
+    SelectoptionComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
     CardPetComponent,
     FooterComponent,
     SpinnerComponent,
-    PaginationComponent
+    PaginationComponent,
+    InputComponent,
+    ButtonComponent,
+    ToastComponent,
+    TextareaComponent,
+    SelectoptionComponent
   ]
 })
 export class SharedModule { }

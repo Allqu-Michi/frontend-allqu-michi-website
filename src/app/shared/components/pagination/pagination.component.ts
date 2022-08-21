@@ -15,16 +15,22 @@ export class PaginationComponent implements OnChanges {
   maxItems: number = 12;
   currentPage: number = 2;
   totalPages: number = 0;
-  viewButtonPlus: boolean = true;
+  viewButtonPlus: boolean = false;
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   ngOnChanges(changes: SimpleChanges):void {
     if(this.dataI.length >= 1){
       this.totalPages = Math.ceil(this.dataI.length / this.maxItems);
-      this.viewButtonPlus = true;
+      if( this.dataI.length <= this.maxItems ){
+        this.viewButtonPlus = false;
+      }else{
+        this.viewButtonPlus = true;
+      }
       this.currentPage= 2;
       this.pagination();
     }
@@ -33,10 +39,19 @@ export class PaginationComponent implements OnChanges {
   pagination(){
     this.dataTemp = [];
     this.dataO.emit(this.dataTemp);
-    for (let i = 0; i < this.maxItems; i++) {
-      this.dataTemp.push(this.dataI[i]);
-      if(this.maxItems - 1 == i){
-        this.dataO.emit(this.dataTemp);
+    if( this.dataI.length <= this.maxItems ){
+      for (let i = 0; i < this.dataI.length; i++) {
+        this.dataTemp.push(this.dataI[i]);
+        if(this.maxItems - 1 == i){
+          this.dataO.emit(this.dataTemp);
+        }
+      }
+    }else{
+      for (let i = 0; i < this.maxItems; i++) {
+        this.dataTemp.push(this.dataI[i]);
+        if(this.maxItems - 1 == i){
+          this.dataO.emit(this.dataTemp);
+        }
       }
     }
   }

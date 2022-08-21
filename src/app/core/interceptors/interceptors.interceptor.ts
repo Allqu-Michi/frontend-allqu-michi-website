@@ -11,14 +11,17 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class InterceptorsInterceptor implements HttpInterceptor {
 
+  tokenJWT = JSON.parse(localStorage.getItem('supabase.auth.token') as string).currentSession.access_token;
+
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5cmJsbm9meXNnanpoemNiYmlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTk4NDQ1OTEsImV4cCI6MTk3NTQyMDU5MX0.bNWMT4iKieYqGnAl2BofjbqNPaor3hj4PqqBLx0B5Qc"
-    const Authorization = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5cmJsbm9meXNnanpoemNiYmlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTk4NDQ1OTEsImV4cCI6MTk3NTQyMDU5MX0.bNWMT4iKieYqGnAl2BofjbqNPaor3hj4PqqBLx0B5Qc"
+    const apiKey = environment.supabaseKey;
+    const Authorization = this.tokenJWT;
     if(!apiKey && !Authorization){
       return next.handle(request);
     }
+    
     const headers = request.clone({
       headers: request.headers
       .set('apiKey', apiKey)

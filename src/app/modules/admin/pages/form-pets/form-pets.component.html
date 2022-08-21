@@ -1,0 +1,70 @@
+<div class="row content-form-pets">
+    <div class="title-card">
+        <h3>NUEVA MASCOTA</h3>
+    </div>
+    <form [formGroup]="authForm" (ngSubmit)="handleCreatePet()" class="flex flex-direction-column  gap-10">
+        <div class="col-12">
+            <app-input
+            [textLabel]="'Nombre'"
+            [typeInput]="'text'"
+            [placeholderInput]="'Firulais'"
+            [alterInput]="alertName" 
+            formControlName="name"
+            ></app-input>
+        </div>
+        <div class="col-12">
+            <app-textarea
+            [textLabel]="'Descripción'"
+            [placeholderInput]="'Pelaje color marron claro ...'"
+            [alterTextArea]="alertDescription" 
+            formControlName="description"
+            ></app-textarea>
+        </div>
+        <div class="col-12">
+            <app-input
+            [textLabel]="'Teléfono / Celular'"
+            [typeInput]="'text'"
+            [placeholderInput]="'9999999'"
+            [alterInput]="alertCellphone" 
+            formControlName="cellphone"
+            ></app-input>
+        </div>
+        <div class="col-12">
+            <app-input
+            [textLabel]="'Distrito'"
+            [typeInput]="'text'"
+            [placeholderInput]="'Los Olivos'"
+            [alterInput]="alertAddress" 
+            formControlName="address"
+            ></app-input>
+        </div>
+        <div class="col-12">
+            <app-input
+            [textLabel]="'Color'"
+            [typeInput]="'text'"
+            [placeholderInput]="'Marron claro'"
+            [alterInput]="alertColor" 
+            formControlName="color"
+            ></app-input>
+        </div>
+        <div class="col-12">
+            <app-input
+            [textLabel]="'Correo'"
+            [typeInput]="'text'"
+            [placeholderInput]="'nogheric@gmail.com'"
+            [alterInput]="alertEmail" 
+            formControlName="email"
+            ></app-input>
+        </div>
+        <div class="col-12">
+            <app-selectoption
+            [textLabel]="'Tipo'"
+            [alterSelect]="alertPetTypeId" 
+            formControlName="petTypeId"
+            >                
+            </app-selectoption>
+        </div>
+        <app-button [textButton]="'Guardar'" *ngIf="!loading"></app-button>
+    </form>
+    <app-spinner class="flex flex-direction-column align-items-center" *ngIf="loading"></app-spinner>
+</div>

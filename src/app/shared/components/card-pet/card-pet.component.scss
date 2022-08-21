@@ -35,11 +35,13 @@
             font-size: 11px;
         }
         & .description-pet {
+            width: 235px;
             height: 48px;
             font-size: 12px;
             line-height: 12px;
             font-weight: 400;
             color: var(--color-grey1);
+            overflow-wrap:break-word;
         }
         & .info-site {
             font-size: 11px;

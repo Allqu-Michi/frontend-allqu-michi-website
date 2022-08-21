@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ServicePetsService {
   
-  baseUrl = environment.baseUrl;
+  baseUrl = environment.baseUrl+'/rest/v1/';
 
   constructor(
     private _http: HttpClient
