@@ -11,9 +11,14 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class InterceptorsInterceptor implements HttpInterceptor {
 
-  tokenJWT = JSON.parse(localStorage.getItem('supabase.auth.token') as string).currentSession.access_token;
+  tokenJWT:string ="";
 
-  constructor() {}
+  constructor() {
+    console.log(localStorage.getItem('supabase.auth.token'))
+    if(localStorage.getItem('supabase.auth.token') != null){
+      this.tokenJWT= JSON.parse(localStorage.getItem('supabase.auth.token') as string).currentSession.access_token;
+    }
+  }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const apiKey = environment.supabaseKey;
