@@ -26,9 +26,6 @@ export class AuthComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    if(this.session){
-      this.router.navigate(['./dashboard'],{relativeTo: this.route});
-    }
   }
 
   authForm = new FormGroup({
@@ -67,7 +64,7 @@ export class AuthComponent implements OnInit{
       try {
         const {user, error, ...rest} = await this.supabase.signIn(this.authForm.value as any);
         if(rest.session != null){
-          this.router.navigate(['./dashboard'],{relativeTo: this.route});
+          this.router.navigate(['./pets'],{relativeTo: this.route});         
         }
         this.toast.initiate({
           title:'MENSAJE',

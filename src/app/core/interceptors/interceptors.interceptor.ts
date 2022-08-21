@@ -14,7 +14,6 @@ export class InterceptorsInterceptor implements HttpInterceptor {
   tokenJWT:string ="";
 
   constructor() {
-    console.log(localStorage.getItem('supabase.auth.token'))
     if(localStorage.getItem('supabase.auth.token') != null){
       this.tokenJWT= JSON.parse(localStorage.getItem('supabase.auth.token') as string).currentSession.access_token;
     }
