@@ -26,11 +26,21 @@ export class InterceptorsInterceptor implements HttpInterceptor {
       return next.handle(request);
     }
     
-    const headers = request.clone({
-      headers: request.headers
-      .set('apiKey', apiKey)
-      .set('Authorization',`Bearer ${Authorization}`)
-    });
-    return next.handle(headers);
+    if(localStorage.getItem('supabase.auth.token') != null) {
+      const headers = request.clone({
+        headers: request.headers
+        .set('apiKey', apiKey)
+        .set('Authorization',`Bearer ${Authorization}`)
+      });
+      return next.handle(headers);
+    }else{
+      const headers = request.clone({
+        headers: request.headers
+        .set('apiKey', apiKey)
+      });
+      return next.handle(headers);
+    }
+
+    
   }
 }
