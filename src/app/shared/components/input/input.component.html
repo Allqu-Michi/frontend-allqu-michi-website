@@ -1,0 +1,14 @@
+
+<div class="flex flex-direction-column content-input">
+    <label 
+    class="label">{{textLabel}}</label>
+    <input 
+    class="input" 
+    (change)="changeText($event)"
+    [value]="value" 
+    [type]="typeInput" 
+    [placeholder]="placeholderInput"/>
+    <div class="alert-input">
+        {{alterInput}}
+    </div>
+</div>

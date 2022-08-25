@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SupabaseService } from 'src/app/core/services/supabase.service';
 
 @Component({
   selector: 'app-home',

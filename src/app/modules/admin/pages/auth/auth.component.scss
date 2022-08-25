@@ -1,0 +1,15 @@
+.content-auth {
+    background-color: #FFF;
+    width: 330px;
+    margin: auto;
+    transform: translateY(50%);
+    border-radius: 15px;
+    padding: 25px 15px;
+    & .content-logo {
+        margin-bottom: 15px;
+        & .img-logo {
+            width: 180px;
+            height: auto;
+        }
+    }
+}

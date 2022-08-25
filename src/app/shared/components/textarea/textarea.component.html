@@ -1,0 +1,22 @@
+<div class="flex flex-direction-column content-textarea">
+    <label 
+    class="label">{{textLabel}}</label>
+    <textarea 
+    class="textarea"
+    rows="4"
+    (change)="changeText($event)"
+    [value]="value" 
+    [placeholder]="placeholderInput"
+    #text
+    (keydown)="counterChacarter()"
+    oncopy="return false;" 
+    onpaste="return false;"
+    oncut="return false;"
+    ></textarea>
+    <!-- <div>
+        {{countCharacter+1}}/150
+    </div> -->
+    <div class="alert-textarea">
+        {{alterTextArea}}
+    </div>
+</div>
