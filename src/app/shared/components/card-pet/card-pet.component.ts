@@ -20,7 +20,6 @@ export class CardPetComponent implements OnChanges {
   ngAfterViewInit(){}
 
   ngAfterViewChecked(){}
-
   prueba(value:any){
     if((value.imageUrl == "" || value.imageUrl == null) && value.petTypeId == 1){
       return "../../../../assets/pet_dog.png";
@@ -31,5 +30,4 @@ export class CardPetComponent implements OnChanges {
       return value.imageUrl;
     }    
   }
-
 }
