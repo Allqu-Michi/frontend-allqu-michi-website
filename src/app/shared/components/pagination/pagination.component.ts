@@ -12,7 +12,7 @@ export class PaginationComponent implements OnChanges {
   @Output() dataO = new EventEmitter<any>();
 
   dataTemp: Array<any> = [];
-  maxItems: number = 12;
+  maxItems: number = 24;
   currentPage: number = 2;
   totalPages: number = 0;
   viewButtonPlus: boolean = false;
