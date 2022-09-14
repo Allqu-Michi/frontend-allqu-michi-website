@@ -1,0 +1,131 @@
+.content-popup-support-bottom{
+    display: block;
+    position: fixed;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #88c0d7;
+    padding: 8px;
+    border-radius: 20px;
+    width: 360px;
+    height: 215px;
+    z-index: 10000;
+    color: var(--color-blue1);
+    font-weight: bold;
+    & > div:nth-child(1) {
+        position: relative;
+        & .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+    & .image {
+        & img {
+            width: 150px;
+        }
+    }
+    & .question {
+        width: 180px;
+        font-size: 25px;
+        text-align: center; 
+        & p {
+            margin: 0;
+        }
+        & button {
+            background-color: var(--color-blue1);
+            outline: none;
+            border: none;
+            color: #FFF;
+            border-radius: 10px;
+            padding: 8px 28px;
+            cursor: pointer;
+        }
+    }
+}
+
+.content-popup-support-left {
+    transition: .3s ;
+    position: fixed;
+    padding: 0 58px;
+    left: -480px;
+    height: 100vh;
+    background-color: #88c0d7;
+    width: 100%;
+    z-index: 10000;
+    & > div:nth-child(1) {
+        height: 100%;
+        & .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            margin: 15px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 35px;
+        }
+        & .title {
+            width: 100%;
+            color: var(--color-blue1);
+        }
+        & .description {
+            font-size: 18px;
+            & p {
+                color: #fff;
+            }
+            & span {
+                color: var(--color-blue1);
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+        & .button-support {
+            & button {
+                background-color: var(--color-orange1);
+                border: none;
+                outline: none;
+                color: #FFF;
+                border-radius: 10px;
+                padding: 8px 28px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) {
+    
+}
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) { 
+    .content-popup-support-bottom {
+        width: 370px;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        margin: 15px;
+    }
+    .content-popup-support-left {
+        width: 420px;
+    }
+}
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) {
+
+}
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) {
+
+}

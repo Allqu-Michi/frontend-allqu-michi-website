@@ -3,7 +3,7 @@
 .content-card {
     justify-content: center;
     display: grid;
-    grid-template-columns: 0 396px;
+    grid-template-columns: 0 374px;
     & .image-pet {
         border-radius: 20px;
         z-index: 10;
@@ -36,7 +36,7 @@
             font-size: 11px;
         }
         & .description-pet {
-            width: 235px;
+            width: auto;
             height: 48px;
             font-size: 12px;
             line-height: 12px;
