@@ -39,8 +39,7 @@ export class InterceptorsInterceptor implements HttpInterceptor {
         .set('apiKey', apiKey)
       });
       return next.handle(headers);
-    }
+    }  
 
-    
   }
 }
