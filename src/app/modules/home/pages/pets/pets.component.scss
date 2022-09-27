@@ -1,24 +1,27 @@
 
 .content-pets {
-    margin: auto;
-    width: 100%;
+    // margin: 0 90px;
+    width: auto;
     min-height: 100%;
     padding: 0 8px;
 }
 
 .app-card-pet {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    // grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
 }
 
 /* Pantallas pequeñas (móviles en landscape de más de 576px) */
 @media (min-width: 576px) {
     .content-pets {
-        width: 70%;
+        // width: 70%;
+        margin: 0 10px;
     }
     .app-card-pet {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        // grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
     }
 }
 
@@ -26,32 +29,37 @@
 @media (min-width: 768px) { 
     
     .content-pets {
-        width: 50%;
+        // width: 50%;
+        // margin: 0 90px;
     }
     .app-card-pet {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        // grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
 }
 
 /* Pantallas grandes (desktops de más de 992px) */
 @media (min-width: 992px) {
     .content-pets {
-        width: 70%;
+        // width: 70%;
+        // margin: 0 90px;
     }
     .app-card-pet {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        // grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
 }
 
 /* Pantallas muy grandes (desktops de más de 1200px) */
 @media (min-width: 1200px) {
     .content-pets {
-        width: 70%;
+        // width: 70%;
+        // margin: 0 10px;
     }
     .app-card-pet {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
 }

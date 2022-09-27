@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastComponent } from './components/toast/toast.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { SelectoptionComponent } from './components/selectoption/selectoption.component';
+import { PopupSupportComponent } from './components/popup-support/popup-support.component';
 
 
 
@@ -26,7 +27,8 @@ import { SelectoptionComponent } from './components/selectoption/selectoption.co
     ButtonComponent,
     ToastComponent,
     TextareaComponent,
-    SelectoptionComponent
+    SelectoptionComponent,
+    PopupSupportComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { SelectoptionComponent } from './components/selectoption/selectoption.co
     ButtonComponent,
     ToastComponent,
     TextareaComponent,
-    SelectoptionComponent
+    SelectoptionComponent,
+    PopupSupportComponent
   ]
 })
 export class SharedModule { }

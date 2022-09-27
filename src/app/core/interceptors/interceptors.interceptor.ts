@@ -11,9 +11,13 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class InterceptorsInterceptor implements HttpInterceptor {
 
-  tokenJWT = JSON.parse(localStorage.getItem('supabase.auth.token') as string).currentSession.access_token;
+  tokenJWT:string ="";
 
-  constructor() {}
+  constructor() {
+    if(localStorage.getItem('supabase.auth.token') != null){
+      this.tokenJWT= JSON.parse(localStorage.getItem('supabase.auth.token') as string).currentSession.access_token;
+    }
+  }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const apiKey = environment.supabaseKey;
@@ -22,11 +26,20 @@ export class InterceptorsInterceptor implements HttpInterceptor {
       return next.handle(request);
     }
     
-    const headers = request.clone({
-      headers: request.headers
-      .set('apiKey', apiKey)
-      .set('Authorization',`Bearer ${Authorization}`)
-    });
-    return next.handle(headers);
+    if(localStorage.getItem('supabase.auth.token') != null) {
+      const headers = request.clone({
+        headers: request.headers
+        .set('apiKey', apiKey)
+        .set('Authorization',`Bearer ${Authorization}`)
+      });
+      return next.handle(headers);
+    }else{
+      const headers = request.clone({
+        headers: request.headers
+        .set('apiKey', apiKey)
+      });
+      return next.handle(headers);
+    }  
+
   }
 }

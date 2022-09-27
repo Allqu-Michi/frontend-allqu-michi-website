@@ -1,8 +1,9 @@
 
 
 .content-card {
+    justify-content: center;
     display: grid;
-    grid-template-columns: 0 auto;
+    grid-template-columns: 0 374px;
     & .image-pet {
         border-radius: 20px;
         z-index: 10;
@@ -23,7 +24,7 @@
         height: 137px;
         margin: 10px 0;
         padding: 10px;
-        padding-left: 164px;
+        padding-left: 160px;
         border-radius: 20px;
         background-color: var(--color-background-card);
         & .name-pet {
@@ -35,7 +36,7 @@
             font-size: 11px;
         }
         & .description-pet {
-            width: 235px;
+            width: auto;
             height: 48px;
             font-size: 12px;
             line-height: 12px;
